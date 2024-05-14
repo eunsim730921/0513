@@ -1,0 +1,7 @@
+#!/bin/bash
+# testing floating point numbers
+val1=$(echo "scale=4; 10 / 3" | bc)
+echo "The test value is $val1"
+if (( $(echo "$val1 > 3" | bc -l) )); then
+    echo "The result is larger than 3"
+fi
